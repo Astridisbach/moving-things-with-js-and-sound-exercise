@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Rock Dodger! (Beta)</title>
-  <link rel="stylesheet" type="text/css" href="index.css">
+  <meta charset="UTF-8"> <!-- Angiver tegnsættet, så specialtegn vises korrekt -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gør siden responsiv -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Sikrer kompatibilitet med Internet Explorer -->
+  <title>Rock Dodger! (Beta)</title> <!-- Titel der vises i browserfanen -->
+  <link rel="stylesheet" type="text/css" href="index.css"> <!-- Link til CSS-fil -->
 </head>
 
 <body>
+  <!-- Spillets container -->
   <div id="game">
+    <!-- Spilfiguren "Dodger" med startposition -->
     <div id="dodger" style="bottom: 0px; left: 180px;"></div>
   </div>
 
+  <!-- Lydeffekt for bevægelse -->
   <audio id="movementSound">
       <source src="audio/movement_sound.m4a" type="audio/mpeg">
-      Your browser does not support the audio element.
+      Your browser does not support the audio element. <!-- Fallback tekst hvis lyd ikke understøttes -->
   </audio>
 
+  <!-- Lydeffekt for game over -->
   <audio id="gameoverSound">
     <source src="audio/gameover_sound.m4a" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-<script type="text/javascript" src="index.js"></script>
+  <!-- Link til JavaScript-filen der styrer spillet -->
+  <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

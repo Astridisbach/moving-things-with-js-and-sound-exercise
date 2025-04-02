@@ -1,55 +1,61 @@
+/* Stil for spilleren (Pac-Man) */
 #dodger {
-  background-color: white;
-  height: 20px;
-  position: absolute;
-  width: 40px;
+  background-image: url(img/pacman.png); /* Sætter Pac-Man-billedet som baggrund */
+  background-size: cover; /* Sikrer, at billedet fylder hele elementet */
+  height: 40px; /* Sætter højden på Pac-Man */
+  width: 40px; /* Sætter bredden på Pac-Man */
+  position: absolute; /* Tillader fri placering inden for #game */
 }
 
+/* Stil for spilleområdet */
 #game {
-  background-color: #111;
-  height: 400px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 400px;
+  background-color: #111; /* Mørk baggrund for at ligne en arkadeskærm */
+  height: 400px; /* Sætter højden på spilområdet */
+  width: 400px; /* Sætter bredden på spilområdet */
+  margin: 0 auto; /* Centrerer spilområdet på siden */
+  overflow: hidden; /* Forhindrer elementer i at bevæge sig uden for rammen */
+  position: relative; /* Gør det muligt at placere elementer absolut inden for området */
+  text-align: center; /* Centrerer indholdet horisontalt */
 }
 
+/* Stil for startknappen */
 #start {
-  color: white;
-  font-size: 4rem;
-  position: relative;
-  text-decoration: none;
-  top: 4rem;
+  color: white; /* Hvid tekstfarve */
+  font-size: 4rem; /* Stor skriftstørrelse */
+  position: relative; /* Bevarer sin placering i dokumentflowet */
+  text-decoration: none; /* Fjerner understregning fra teksten */
+  top: 4rem; /* Flytter knappen lidt ned */
 }
 
+/* Stil for stenene (forhindringer i spillet) */
 .rock {
-  width: 20px;
-  height: 20px;
-  background: tan;
-  position: absolute;
+  width: 20px; /* Sætter stenens bredde */
+  height: 20px; /* Sætter stenens højde */
+  background: tan; /* Lysebrun farve til at ligne en sten */
+  position: absolute; /* Tillader fri placering inden for #game */
 }
 
+/* Dekoration af stenen for at give den en 3D-effekt */
 .rock:before {
-  content: "";
-  border-bottom: 6px solid tan;
-  border-left: 6px solid #111;
-  border-right: 6px solid #111;
-  height: 0;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 9px;
+  content: ""; /* Pseudo-element for den øverste skygge */
+  border-bottom: 6px solid tan; /* Nederste kantfarve */
+  border-left: 6px solid #111; /* Venstre skygge */
+  border-right: 6px solid #111; /* Højre skygge */
+  height: 0; /* Ingen højde, da det kun er en kant */
+  left: 0; /* Placeres i venstre hjørne af stenen */
+  position: absolute; /* Placering relativt til .rock */
+  top: 0; /* Placeres øverst */
+  width: 9px; /* Bredden af pseudo-elementet */
 }
 
 .rock:after {
-  content: "";
-  border-left: 6px solid #111;
-  border-right: 6px solid #111;
-  border-top: 6px solid tan;
-  bottom: 0;
-  height: 0;
-  left: 0;
-  position: absolute;
-  width: 9px;
+  content: ""; /* Pseudo-element for den nederste skygge */
+  border-left: 6px solid #111; /* Venstre skygge */
+  border-right: 6px solid #111; /* Højre skygge */
+  border-top: 6px solid tan; /* Øverste kantfarve */
+  bottom: 0; /* Placeres nederst */
+  height: 0; /* Ingen højde, da det kun er en kant */
+  left: 0; /* Placeres i venstre hjørne af stenen */
+  position: absolute; /* Placering relativt til .rock */
+  width: 9px; /* Bredden af pseudo-elementet */
 }

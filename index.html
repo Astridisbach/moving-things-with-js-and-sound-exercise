@@ -7,10 +7,22 @@
   <title>Rock Dodger! (Beta)</title>
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
   <div id="game">
     <div id="dodger" style="bottom: 0px; left: 180px;"></div>
   </div>
-  <script type="text/javascript" src="index.js"></script>
+
+  <audio id="movementSound">
+      <source src="audio/movement_sound.m4a" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+
+  <audio id="gameoverSound">
+    <source src="audio/gameover_sound.m4a" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
